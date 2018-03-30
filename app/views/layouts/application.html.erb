@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Working Title</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Home', root_path %>
+      <% if @current_account.present? %>
+        <%= link_to "Sign out #{ @current_account.email }", login_path, :method => 'delete' %>
+      <% else %>
+        <%= link_to 'Sign Up', new_account_path %>
+        <%= link_to 'Sign In', login_path %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>
