@@ -1,0 +1,15 @@
+<%= form_for @blog do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :autofocus => true %>
+
+  <%= f.label :length %>
+  <%= f.text_field :length %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+
+  <%= f.submit %>
+<% end %>

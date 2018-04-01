@@ -1,0 +1,16 @@
+<h1><%= @place.name %></h1>
+<ul>
+  <li><%= @place.area %></li>
+  <li><%= @place.length %></li>
+  <li><%= @place.distance %></li>
+  <li><%= @place.difficulty %></li>
+  <li><%= @place.one_way %></li>
+  <li><%= @place.fee %></li>
+  <li><%= @place.conditions %></li>
+  <li><%= @place.safety %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit place', edit_place_path(@place) %>
+  <%= link_to 'Delete place', @place, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

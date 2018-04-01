@@ -42,6 +42,9 @@ ActiveRecord::Schema.define(version: 20180331003756) do
 
   create_table "blogs", force: :cascade do |t|
     t.text "title"
+    t.text "length"
+    t.text "description"
+    t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,6 +57,15 @@ ActiveRecord::Schema.define(version: 20180331003756) do
 
   create_table "places", force: :cascade do |t|
     t.text "name"
+    t.text "area"
+    t.text "length"
+    t.text "distance"
+    t.text "difficulty"
+    t.text "one_way"
+    t.text "fee"
+    t.text "access"
+    t.text "conditions"
+    t.text "safety"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

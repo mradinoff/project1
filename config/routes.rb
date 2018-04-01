@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :accounts, :only => [:new, :create]
   resources :avatars
+  resources :blogs
+  resources :places
 
   get '/login' => 'session#new'        # Sign in form
   post '/login' => 'session#create'    # Sign in action

@@ -1,0 +1,33 @@
+<%= form_for @place do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+
+  <%= f.label :area %>
+  <%= f.text_field :area %>
+
+  <%= f.label :length %>
+  <%= f.text_field :length %>
+
+  <%= f.label :distance %>
+  <%= f.text_field :distance %>
+
+  <%= f.label :difficulty %>
+  <%= f.text_field :difficulty %>
+
+  <%= f.label :one_way %>
+  <%= f.text_field :one_way %>
+
+  <%= f.label :fee %>
+  <%= f.text_field :fee %>
+
+  <%= f.label :access %>
+  <%= f.text_field :access %>
+
+  <%= f.label :conditions %>
+  <%= f.text_field :conditions %>
+
+  <%= f.label :safety %>
+  <%= f.text_field :safety %>
+
+  <%= f.submit %>
+<% end %>
