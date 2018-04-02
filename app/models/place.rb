@@ -4,6 +4,15 @@
 #
 #  id         :integer          not null, primary key
 #  name       :text
+#  area       :text
+#  length     :text
+#  distance   :text
+#  difficulty :text
+#  one_way    :text
+#  fee        :text
+#  access     :text
+#  conditions :text
+#  safety     :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

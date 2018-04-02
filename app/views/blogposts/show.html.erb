@@ -1,0 +1,11 @@
+<h1><%= @blogpost.title %></h1>
+<ul>
+  <li><%= @blogpost.date %></li>
+</ul>
+<p><%= @blogpost.content %> </p>
+
+
+<div class="controls">
+  <%= link_to 'Edit blogpost', edit_blogpost_path(@blogpost) %>
+  <%= link_to 'Delete blogpost', @blogpost, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
