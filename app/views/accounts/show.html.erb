@@ -1,5 +1,5 @@
 <h1><%= @account.display_name %> </h1>
-<%= link_to image_tag(@account.image, :alt => @account.title, :class => 'feature'), @account.image %>
+<%= link_to image_tag(@account.display_photo, :alt => @account.display_name, :class => 'feature'), @account.display_photo %>
 <ul>
   <li><%= @account.dob %></li>
   <li><%= @account.interests %></li>
@@ -10,5 +10,4 @@
 
 <div class="controls">
   <%= link_to 'Edit account', edit_account_path(@account) %>
-  <%= link_to 'Delete account', @account, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 </div>

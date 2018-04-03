@@ -4,10 +4,16 @@
 #
 #  id              :integer          not null, primary key
 #  email           :text
-#  avatar_id       :integer
+#  display_name    :text
+#  display_photo   :text
+#  interests       :text
+#  dob             :date
+#  location        :text
+#  hiking_ability  :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
+#  comment_id      :integer
 #
 
 class Account < ApplicationRecord

@@ -13,9 +13,9 @@
 #  access     :text
 #  conditions :text
 #  safety     :text
-#  blog_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  comment_id :integer
 #
 
 class Place < ApplicationRecord

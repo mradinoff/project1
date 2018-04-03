@@ -13,6 +13,7 @@
       <%= link_to 'Home', root_path %>
       <% if @current_account.present? %>
         <%= link_to "Sign out #{ @current_account.email }", login_path, :method => 'delete' %>
+        <%= link_to "My Account", account_path(@current_account.id) %>
       <% else %>
         <%= link_to 'Sign Up', new_account_path %>
         <%= link_to 'Sign In', login_path %>
