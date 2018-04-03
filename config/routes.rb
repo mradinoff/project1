@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
 
-  resources :accounts, :only => [:new, :create]
+  resources :accounts
   resources :places
   resources :comments
 
