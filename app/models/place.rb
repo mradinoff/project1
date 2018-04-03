@@ -13,9 +13,11 @@
 #  access     :text
 #  conditions :text
 #  safety     :text
+#  blog_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 class Place < ApplicationRecord
+  has_many :comments
 end

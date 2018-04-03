@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   root :to => 'pages#home'
 
   resources :accounts, :only => [:new, :create]
-  resources :avatars
-  resources :blogs
   resources :places
-  resources :blogposts
   resources :comments
 
   get '/login' => 'session#new'        # Sign in form

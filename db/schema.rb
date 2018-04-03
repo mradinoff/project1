@@ -10,19 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402033456) do
+ActiveRecord::Schema.define(version: 20180403020235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
     t.text "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-  end
-
-  create_table "avatars", force: :cascade do |t|
     t.text "display_name"
     t.text "display_photo"
     t.text "interests"
@@ -31,24 +25,8 @@ ActiveRecord::Schema.define(version: 20180402033456) do
     t.text "hiking_ability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "blogposts", force: :cascade do |t|
-    t.text "title"
-    t.text "date"
-    t.text "content"
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "blogs", force: :cascade do |t|
-    t.text "title"
-    t.text "length"
-    t.text "description"
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.integer "comment_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -72,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180402033456) do
     t.text "safety"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "comment_id"
   end
 
 end
