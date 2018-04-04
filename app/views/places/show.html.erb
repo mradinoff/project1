@@ -9,7 +9,12 @@
   <li><%= @place.conditions %></li>
   <li><%= @place.safety %></li>
 </ul>
-
+<% unless @place.comments.empty? %>
+  <h2>Comments</h2>
+  <% @place.comments.each do |comment| %>
+    <%= comment.date %>
+  <% end %>
+<% end %>
 <div class="controls">
   <%= link_to 'Edit place', edit_place_path(@place) %>
   <%= link_to 'Delete place', @place, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>

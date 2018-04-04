@@ -8,8 +8,15 @@
   <li><%= @account.location %></li>
   <li><%= @account.hiking_ability %></li>
 </ul>
-
-
-<div class="controls">
-  <%= link_to 'Edit account', edit_account_path(@account) %>
-</div>
+<% unless @account.comments.empty? %>
+  <h2>Comments</h2>
+  <% @account.comments.each do |comment| %>
+    <%= comment.date %>
+  <% end %>
+<% end %>
+<% if @current_account.id == params[:id].to_i %>
+  <div class="controls">
+    <%= link_to 'Edit account', edit_account_path(@account) %>
+  </div>
+<% else %>
+<% end %>

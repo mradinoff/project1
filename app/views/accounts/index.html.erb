@@ -1,0 +1,9 @@
+<h1>Other Adventures</h1>
+
+<% @account.each do |account| %>
+    <ul>
+      <% unless account.display_name == @current_account.display_name || account.display_name.nil? || account.display_name.empty?%>
+      <li><%= account.display_name %></li>
+      <% end %>
+    </ul>
+<% end %>
