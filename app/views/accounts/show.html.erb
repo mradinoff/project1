@@ -1,5 +1,7 @@
 <h1><%= @account.display_name %> </h1>
+<% unless @account.display_photo.nil? %>
 <%= link_to image_tag(@account.display_photo, :alt => @account.display_name, :class => 'feature'), @account.display_photo %>
+<% end %>
 <ul>
   <li><%= @account.dob %></li>
   <li><%= @account.interests %></li>

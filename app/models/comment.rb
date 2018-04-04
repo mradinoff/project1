@@ -8,8 +8,11 @@
 #  blog       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  place_id   :integer
+#  account_id :integer
 #
 
 class Comment < ApplicationRecord
-  belongs_to :places 
+  belongs_to :places, optional: true
+  belongs_to :accounts, optional: true
 end

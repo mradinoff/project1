@@ -2,5 +2,10 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <% if @current_account.present? %>
+  <% if @current_account.display_name.nil? %>
   Welcome back <%= @current_account.email %>
+  <% else %>
+  Welcome back <%= @current_account.display_name %>
+  <% end %>
+<%= link_to 'Places', places_path %>
 <% end %>

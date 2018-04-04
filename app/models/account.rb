@@ -13,7 +13,6 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
-#  comment_id      :integer
 #
 
 class Account < ApplicationRecord

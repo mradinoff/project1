@@ -9,5 +9,8 @@
   <%= f.label :blog %>
   <%= f.text_field :blog %>
 
+  <%= f.label :place_id %>
+  <%= f.select :place_id, Place.pluck(:name, :id), :include_blank => true %>
+
   <%= f.submit %>
 <% end %>

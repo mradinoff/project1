@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   end
 
   def index
-    @comments = Comment.all
+    @comment = Comment.all
   end
 
   def show
@@ -16,11 +16,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.create comment_params
+    comment = Comment.new comment_params
+    comment.account_id = @current_account.id
     if comment.save
-      redirect_to root_path # it worked!
+      redirect_to comment # it worked!
     else
-      redirect_to comments
+      redirect_to new
     end
   end
 
@@ -38,6 +39,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:date, :content, :blog, )
+    params.require(:comment).permit(:date, :content, :blog, :place_id)
   end
 end
