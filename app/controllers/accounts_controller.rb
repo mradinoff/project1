@@ -4,6 +4,10 @@ class AccountsController < ApplicationController
     @account = Account.new
   end
 
+  def index
+    @account = Account.all
+  end
+
   def edit
     unless @current_account.id == params[:id].to_i
       redirect_to accounts_path
@@ -24,9 +28,7 @@ class AccountsController < ApplicationController
     redirect_to account
   end
 
-  def index
-    @account = Account.all
-  end
+
 
   def create
     @account = Account.new account_params
