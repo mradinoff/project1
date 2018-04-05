@@ -3,20 +3,26 @@
 <% if @account.errors.any? %>
   <ol>
     <% @account.errors.full_messages.each do |msg| %>
-      <li><%= msg.capitalize %></li>
+    <div class="alert alert-primary" role="alert">
+    <li><%= msg.capitalize %></li>
+    </div>
     <% end %>
   </ol>
 <% end %>
 
-<%= form_for @account do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email, :required => true %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+<div class="form-group">
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= form_for @account do |f| %>
+    <%= f.label :email_address %>
+    <%= f.email_field :email, :required => true, :class => "form-control", :placeholder => "name@example.com" %>
 
-  <%= f.submit "Sign up!" %>
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => "form-control" %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => "form-control" %>
+
+    <%= f.submit "Sign up!" %>
+  </div>
 <% end %>
