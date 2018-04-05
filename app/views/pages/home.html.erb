@@ -1,11 +1,40 @@
 
-<p class="description">Description</p>
+<div class="jumbotron">
+  <h1 class="display-4">
+        Welcome back Mradi!
+</h1>
 
-<% if @current_account.present? %>
-  <% if @current_account.display_name.nil? %>
-  Welcome back <%= @current_account.email %>
-  <% else %>
-  Welcome back <%= @current_account.display_name %>
-  <% end %>
-<%= link_to 'Places', places_path %>
-<% end %>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Large Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+          <p>This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </p>
+</div>
+<div class="container" id="home">
+  <div class="row">
+    <div class="col">
+      <img src="https://fillmurray.com/300/300">
+    </div>
+    <div class="col">
+      <img src="https://fillmurray.com/300/300">
+    </div>
+  </div>
+
+</div>
