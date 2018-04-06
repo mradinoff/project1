@@ -10,7 +10,8 @@ HTML, CSS, Ruby On Rails, and Bootstrap.
 * A user that is not signed in can still view accounts
 * Display Issues
 
-### To Do List
+## To Do List
+###
   1. Complete page CSS
   1. Geolocation for trails
   1. API for places (e.g. current conditions and safety concerns)
@@ -34,4 +35,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 Thanks to my teachers Joel, John, Theo, and my mentor Miriam.
 
-![New South Trails Screenshot](assets/screenshot.png)
+![New South Trails Screenshot](img/screenshot.png)
