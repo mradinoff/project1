@@ -35,4 +35,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 Thanks to my teachers Joel, John, Theo, and my mentor Miriam.
 
-![New South Trails Screenshot](img/screenshot.png)
+![New South Trails Screenshot](app/assets/images/screenshot.png)
