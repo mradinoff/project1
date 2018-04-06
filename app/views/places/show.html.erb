@@ -1,21 +1,47 @@
-<h1><%= @place.name %></h1>
-<ul>
-  <li><%= @place.area %></li>
-  <li><%= @place.length %></li>
-  <li><%= @place.distance %></li>
-  <li><%= @place.difficulty %></li>
-  <li><%= @place.one_way %></li>
-  <li><%= @place.fee %></li>
-  <li><%= @place.conditions %></li>
-  <li><%= @place.safety %></li>
-</ul>
+<dl class="row">
+  <dt class="col-sm-3", id="placename"><%= @place.name %></dt>
+  <dt class="col-sm-9"></dt>
+  <dd class="col-sm-3", id="placearea"><%= @place.area %></dd>
+  <dt class="col-sm-9"></dt>
+
+  <dt class="col-sm-3">Estimated time needed</dt>
+  <dd class="col-sm-9">
+    <p><%= @place.length %></p>
+  </dd>
+  <dt class="col-sm-3">Distance of the trail (kilometres)</dt>
+  <dd class="col-sm-9">
+    <p><%= @place.distance %></p>
+  </dd>
+  <dt class="col-sm-3">Difficulty of the trail</dt>
+  <dd class="col-sm-9">
+    <p><%= @place.difficulty %></p>
+  </dd>
+  <dt class="col-sm-3">Is the trail a circuit?</dt>
+  <dd class="col-sm-9">
+    <p><%= @place.one_way %></p>
+  </dd>
+  <dt class="col-sm-3">Park fees</dt>
+  <dd class="col-sm-9">
+    <p><%= @place.fee %></p>
+  </dd>
+</dl>
+
 <% unless @place.comments.empty? %>
   <h2>Comments</h2>
   <% @place.comments.each do |comment| %>
+  <br>
     <%= comment.date %>
+    <br>
+    <%= comment.content %>
+    <br>
+    <%= comment.blog%>
+    <br>
   <% end %>
 <% end %>
+<%= link_to 'Add Trail Notes', new_comment_path %>
+<br>
 <div class="controls">
   <%= link_to 'Edit place', edit_place_path(@place) %>
+  <br>
   <%= link_to 'Delete place', @place, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 </div>
