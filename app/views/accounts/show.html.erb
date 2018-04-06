@@ -1,17 +1,41 @@
-<h1><%= @account.display_name %> </h1>
-<% unless @account.display_photo.nil? %>
-<%= link_to image_tag(@account.display_photo, :alt => @account.display_name, :class => 'feature'), @account.display_photo %>
-<% end %>
-<ul>
-  <li><%= @account.dob %></li>
-  <li><%= @account.interests %></li>
-  <li><%= @account.location %></li>
-  <li><%= @account.hiking_ability %></li>
-</ul>
-<% unless @account.comments.empty? %>
+
+<dl class="row">
+  <dt class="col-sm-3", id="accountname"><%= @account.display_name %></dt>
+  <dt class="col-sm-9"></dt>
+  <% unless @account.display_photo.nil? %>
+  <dd class="col-sm-3", id="accountphoto"> <img class="img-fluid" src="<%=@account.display_photo%>">
+  </dd>
+  <% end %>
+  <dt class="col-sm-9"></dt>
+
+  <dt class="col-sm-3">Date of Birth</dt>
+  <dd class="col-sm-9">
+    <p><%= @account.dob %></p>
+  </dd>
+  <dt class="col-sm-3">Interests</dt>
+  <dd class="col-sm-9">
+    <p><%= @account.interests %></p>
+  </dd>
+  <dt class="col-sm-3">Hiking Ability</dt>
+  <dd class="col-sm-9">
+    <p><%= @account.hiking_ability %></p>
+  </dd>
+</dl>
+
+  <% unless @account.comments.empty? %>
   <h2>Comments</h2>
   <% @account.comments.each do |comment| %>
-    <%= comment.date %>
+  <div class="media">
+  <img class="mr-3" src="<%@account.display_photo%>">
+  <div class="media-body">
+    <h5 class="mt-0"><%@account.display_name%></h5>
+    <%comment.content%>
+    <br>
+    Date of trip <%comment.date%>
+    <br>
+    Relevant blog <%comment.blog%>
+  </div>
+</div>
   <% end %>
 <% end %>
 <% if @current_account.id == params[:id].to_i %>

@@ -3,7 +3,7 @@
 <% @account.each do |account| %>
     <ul>
       <% unless account.display_name == @current_account.display_name || account.display_name.nil? || account.display_name.empty?%>
-      <li><%= account.display_name %></li>
+      <li><a href="/accounts/<%=account.id%>"><%= account.display_name %> </a></li>
       <% end %>
     </ul>
 <% end %>

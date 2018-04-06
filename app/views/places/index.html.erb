@@ -1,7 +1,7 @@
-<h1>Nsw ____</h1>
+<h1>Hiking Trails</h1>
 
 <% @place.each do |place| %>
     <ul>
-      <li><%= place.name %></li>
+      <li><a href="/places/<%=place.id%>"> <%= place.name %> </a></li>
     </ul>
 <% end %>

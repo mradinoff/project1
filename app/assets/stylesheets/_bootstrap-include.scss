@@ -57,4 +57,12 @@ body {
 }
 .row{
   margin-left: 20px;
+  text-align: center;
+  align-content: center;
+}
+#accountphoto img{
+  max-width: 300px;
+}
+.modal-body {
+  letter-spacing: 0.05em;
 }

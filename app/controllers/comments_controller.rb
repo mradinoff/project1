@@ -4,9 +4,6 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    unless @current_account.id == params[:id]
-      redirect_to comments_path
-    end
     @comment = Comment.find params[:id]
   end
 
