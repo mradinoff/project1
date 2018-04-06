@@ -1,24 +1,37 @@
-# README
+# New South Trails (Project 1)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+A simple tourism-based site using CRUD systems.
 
-Things you may want to cover:
+## Built With
+HTML, CSS, Ruby On Rails, and Bootstrap.
 
-* Ruby version
+## Known Bugs
+* A user that is not signed in can still view accounts
+* Display Issues
 
-* System dependencies
+### To Do List
+  1. Complete page CSS
+  1. Geolocation for trails
+  1. API for places (e.g. current conditions and safety concerns)
+  1. Placeholder account display image
+  1. Placeholder (anonymous) for users without display name
+  1. More Navigation options
+  1. Sign-up results in auto login
+  1. Ghostinary (with possibility to add more than one image)
+  1. Form Design
+  1. Add placeholder text to forms
+  1. User following User functionality
+  1. Social media tag implementation on user pages
 
-* Configuration
 
-* Database creation
+## Authors
+Mac Radinoff.
 
-* Database initialization
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
-* How to run the test suite
+## Acknowledgments
+Thanks to my teachers Joel, John, Theo, and my mentor Miriam.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![New South Trails Screenshot](assets/screenshot.png)
