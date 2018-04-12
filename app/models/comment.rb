@@ -13,6 +13,6 @@
 #
 
 class Comment < ApplicationRecord
-  belongs_to :places, optional: true
-  belongs_to :accounts, optional: true
+  belongs_to :place
+  belongs_to :account
 end

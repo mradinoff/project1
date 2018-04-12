@@ -2,7 +2,7 @@
 
 <% @account.each do |account| %>
     <ul>
-      <% unless account.display_name == @current_account.display_name || account.display_name.nil? || account.display_name.empty?%>
+      <% unless account.display_name == @current_account.display_name || account.display_name.nil? || account.display_name.empty? || account.display_name === "Anonymous"%>
       <li><a href="/accounts/<%=account.id%>"><%= account.display_name %> </a></li>
       <% end %>
     </ul>

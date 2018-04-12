@@ -38,6 +38,8 @@
 </div>
   <% end %>
 <% end %>
+<a href="/accounts">Back</a>
+
 <% if @current_account.id == params[:id].to_i %>
   <div class="controls">
     <%= link_to 'Edit account', edit_account_path(@account) %>

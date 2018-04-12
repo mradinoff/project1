@@ -2,7 +2,7 @@
 
 html {
   position: relative;
-  min-height: 100%;
+  min-height: 86%;
 }
 body {
   /* Margin bottom by footer height */
@@ -56,13 +56,31 @@ body {
   margin-top: 15px;
 }
 .row{
-  margin-left: 20px;
+  margin: 99px;
   text-align: center;
   align-content: center;
+  margin-bottom: 0px;
+  margin-top: 40px;
 }
 #accountphoto img{
   max-width: 300px;
 }
 .modal-body {
   letter-spacing: 0.05em;
+}
+.jumbotron {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 55px;
+  max-height: 286px;
+}
+
+#placeslink{
+  margin-left: 43px;
+}
+#peoplelink{
+  margin-left: 61px;
+}
+#modal-footer{
+  max-height: 40px;
 }

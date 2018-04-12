@@ -32,8 +32,11 @@ class AccountsController < ApplicationController
 
   def create
     @account = Account.new account_params
+    @account.display_photo = "/assets/avatar.png"
+    @account.display_name = "Anonymous"
     if @account.save
-      redirect_to root_path # it worked!
+      session[:account_id] = @account.id
+      redirect_to root_path
     else
       render :new
     end
