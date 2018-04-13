@@ -18,7 +18,7 @@
     <%if @current_account.present? %>
       Click the Links Below</p>
     <% else %>
-    Login to your Account, then Click the Links Below
+    <span>Login to your Account</span>, then Click the Links Below
   <% end %>
   <hr class="my-4">
   <p class="lead">
@@ -58,7 +58,7 @@
       </div>
     <div class="col">
       <div class="card border-dark mb-3" id="peoplelink" style="max-width: 18rem;">
-        <div class="card-header"><a class="accountslink" href="/accounts/index"> Other Adventurers </a></div>
+        <div class="card-header"><a class="accountslink" <%if @current_account.nil?%> href="/"> <%else%> href="/accounts/index"><%end%> Other Adventurers </a></div>
         <div class="card-body text-dark">
           <p class="card-text">Make your hiking community a little bigger!</p>
         </div>

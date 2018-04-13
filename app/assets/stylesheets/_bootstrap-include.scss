@@ -84,7 +84,11 @@ body {
 #modal-footer{
   max-height: 40px;
 }
-
+.lead span{
+  color:red;
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 @media (min-width: 576px){
   .jumbotron {
