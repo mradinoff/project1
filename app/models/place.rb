@@ -19,4 +19,7 @@
 
 class Place < ApplicationRecord
   has_many :comments
+  has_many :accounts, through: :comments
+  belongs_to :comment, optional: true
+  belongs_to :accounts, optional: true
 end

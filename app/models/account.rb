@@ -18,7 +18,9 @@
 class Account < ApplicationRecord
   has_secure_password
   has_many :comments
-  
+  has_many :accounts, through: :comments
+  belongs_to :comment, optional: true
+  belongs_to :places, optional: true
 
   validates :email, :presence => true, :uniqueness => true
 end

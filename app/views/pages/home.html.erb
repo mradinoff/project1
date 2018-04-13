@@ -3,7 +3,7 @@
   <h1 class="display-4">
 
     <% if @current_account.present? %>
-      <% if @current_account.display_name.present?%>
+      <% if @current_account.display_name.present? && @current_account.display_name != "Anonymous"%>
         Welcome back <%= @current_account.display_name %> !
       <% else %>
       Welcome back <%= @current_account.email %> !

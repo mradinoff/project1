@@ -7,7 +7,7 @@ A simple tourism-based site using CRUD systems.
 HTML, CSS, Ruby On Rails, and Bootstrap.
 
 ## Known Bugs
-* A user that is not signed in can still view accounts
+* Clicking on "Other Adventurers" before login results in crash
 * Display Issues
 
 ## To Do List

@@ -84,3 +84,10 @@ body {
 #modal-footer{
   max-height: 40px;
 }
+
+
+@media (min-width: 576px){
+  .jumbotron {
+      min-height: 357px;
+  }
+}

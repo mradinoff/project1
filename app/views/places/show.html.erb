@@ -30,18 +30,20 @@
   <h2>Comments</h2>
   <% @place.comments.each do |comment| %>
   <br>
-    <%= comment.date %>
-    <br>
-    <%= comment.content %>
-    <br>
-    <%= comment.blog%>
-    <br>
+  <div class="media">
+  <img class="align-self-center mr-3" src="<%=comment.account.display_photo%>" alt="<%=comment.account.display_photo%>">
+  <div class="media-body">
+    <h5 class="mt-0"><%=comment.date%></h5>
+    <p><%=comment.content%></p>
+    <p class="mb-0"><%=comment.blog%></p>
+  </div>
+</div>
+
   <% end %>
 <% end %>
 <%= link_to 'Add Trail Notes', new_comment_path %>
-<a href='/places'>Back</a>
-
 <br>
+
 <div class="controls">
   <%= link_to 'Edit place', edit_place_path(@place) %>
   <br>
